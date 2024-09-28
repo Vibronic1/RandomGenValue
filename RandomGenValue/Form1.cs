@@ -25,7 +25,7 @@ namespace RandomGenValue
             dataGridView1.Rows[0].Tag = "Values";
             for (int i = 0;i<Program.count;i++) 
             {
-                dataGridView1.Columns[i].Name = i.ToString();
+                dataGridView1.Columns[i].Name = (i+1).ToString();
                 dataGridView1.Rows[0].Cells[i].Value = numbers[i];
 
             }
