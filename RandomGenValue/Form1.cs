@@ -22,8 +22,10 @@ namespace RandomGenValue
             numbers = Program.GenerateValues( new Random(), Program.count);
             dataGridView1.ColumnCount = Program.count;
             dataGridView1.RowCount = 1;
+            dataGridView1.Rows[0].Tag = "Values";
             for (int i = 0;i<Program.count;i++) 
             {
+                dataGridView1.Columns[i].Name = i.ToString();
                 dataGridView1.Rows[0].Cells[i].Value = numbers[i];
 
             }
