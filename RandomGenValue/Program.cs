@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+
 namespace RandomGenValue
 {
     internal static class Program
@@ -12,6 +17,17 @@ namespace RandomGenValue
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+        }
+        
+        static int[] GenerateValues(Random rand,int Count)
+        {
+            int[] values = new int[Count];
+            for (int i=0; i < Count; i++)
+            {
+                values[i] = rand.Next();
+            }
+
+            return values;
         }
     }
 }
