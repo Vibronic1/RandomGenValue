@@ -22,11 +22,10 @@ namespace RandomGenValue
             numbers = Program.GenerateValues( new Random(), Program.count);
             dataGridView1.ColumnCount = Program.count;
             dataGridView1.RowCount = 1;
-            int i = 0;
-            foreach (int n in numbers)
+            for (int i = 0;i<Program.count;i++) 
             {
-                dataGridView1.Rows[1].Cells[i].Value = n;
-                i++;
+                dataGridView1.Rows[0].Cells[i].Value = numbers[i];
+
             }
 
         }
